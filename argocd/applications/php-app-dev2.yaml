@@ -6,7 +6,7 @@ metadata:
 spec:
   project: php-app
   source:
-    repoURL: https://github.com/your-org/local_cluster2.git
+    repoURL: https://github.com/OlegGerasymenko/local_cluster2.git
     targetRevision: HEAD
     path: php-app/overlays/dev2
   destination:

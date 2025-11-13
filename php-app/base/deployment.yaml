@@ -28,18 +28,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: php-app-config
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 80
-            initialDelaySeconds: 5
-            periodSeconds: 10
-          livenessProbe:
-            httpGet:
-              path: /
-              port: 80
-            initialDelaySeconds: 10
-            periodSeconds: 20
           resources:
             requests:
               cpu: 100m
