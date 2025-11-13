@@ -6,6 +6,8 @@ commonLabels:
 resources:
   - ../../base
   - namespace.yaml
+  - pv.yaml
+  - pvc.yaml
 patchesStrategicMerge:
   - patches/deployment.yaml
   - patches/configmap.yaml
