@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: php-app
+  namespace: argocd
+spec:
+  description: PHP application environments managed via Kustomize overlays
+  sourceRepos:
+    - https://github.com/your-org/local_cluster2.git
+  destinations:
+    - namespace: php-app-dev1
+      server: https://kubernetes.default.svc
+    - namespace: php-app-dev2
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
+  namespaceResourceBlacklist: []
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  orphanedResources:
+    warn: true

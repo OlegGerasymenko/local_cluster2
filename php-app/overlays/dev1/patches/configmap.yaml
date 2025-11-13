@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: php-app-config
+  labels:
+    environment: dev1
+data:
+  APP_ENV: dev1
+  APP_MESSAGE: "Hello from dev1"

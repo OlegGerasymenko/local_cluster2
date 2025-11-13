@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: php-app-dev2
+  namespace: argocd
+spec:
+  project: php-app
+  source:
+    repoURL: https://github.com/your-org/local_cluster2.git
+    targetRevision: HEAD
+    path: php-app/overlays/dev2
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: php-app-dev2
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
