@@ -11,3 +11,11 @@ spec:
           env:
             - name: PHP_DISPLAY_ERRORS
               value: "1"
+          volumeMounts:
+            - name: dev1-php-app-logs
+              mountPath: /var/log/php-app
+              subPath: dev1
+      volumes:
+        - name: dev1-php-app-logs
+          persistentVolumeClaim:
+            claimName: php-app-logs

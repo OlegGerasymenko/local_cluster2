@@ -20,9 +20,6 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
-          volumeMounts:
-            - name: php-app-logs
-              mountPath: /var/log/php-app
           env:
             - name: PHP_MEMORY_LIMIT
               value: "256M"
@@ -38,7 +35,3 @@ spec:
             limits:
               cpu: 500m
               memory: 256Mi
-      volumes:
-        - name: php-app-logs
-          persistentVolumeClaim:
-            claimName: php-app-logs
