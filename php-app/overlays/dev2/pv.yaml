@@ -4,7 +4,7 @@ metadata:
   name: php-app-logs-dev2
 spec:
   capacity:
-    storage: 1Gi
+    storage: 100Mi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain

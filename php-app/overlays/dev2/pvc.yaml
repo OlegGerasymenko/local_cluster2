@@ -9,5 +9,5 @@ spec:
   storageClassName: manual
   resources:
     requests:
-      storage: 1Gi
+      storage: 100Mi
   volumeName: php-app-logs-dev2
