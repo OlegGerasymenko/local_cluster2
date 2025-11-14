@@ -12,10 +12,10 @@ spec:
             - name: PHP_DISPLAY_ERRORS
               value: "1"
           volumeMounts:
-            - name: dev2-php-app-logs
+            - name: dev2-php-app-volume
               mountPath: /var/log/php-app
               subPath: dev2
       volumes:
-        - name: dev2-php-app-logs
+        - name: dev2-php-app-volume
           persistentVolumeClaim:
             claimName: php-app-dev2-pvc

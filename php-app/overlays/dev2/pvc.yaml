@@ -10,4 +10,4 @@ spec:
   resources:
     requests:
       storage: 100Mi
-  volumeName: php-app-logs-dev2
+  volumeName: php-app-dev2-volume
